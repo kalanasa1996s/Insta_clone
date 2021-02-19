@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:instaclone/insta_stories.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class InstaList extends StatelessWidget {
   @override
@@ -20,6 +21,7 @@ class InstaList extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                //Row no 1
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16.0, 16.0, 8.0, 16.0),
                   child: Row(
@@ -40,9 +42,10 @@ class InstaList extends StatelessWidget {
                         width: 10.0,
                       ),
                       Text(
-                        "Kalana Sasanka",
+                        "kalana_sasanka",
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
+
                       // IconButton(
 
                       //   icon: Icon(Icons.more_vert),
@@ -51,6 +54,8 @@ class InstaList extends StatelessWidget {
                     ],
                   ),
                 ),
+
+                //Row no 2
                 Flexible(
                   fit: FlexFit.loose,
                   child: Image.network(
@@ -58,6 +63,43 @@ class InstaList extends StatelessWidget {
                     fit: BoxFit.cover,
                   ),
                 ),
+
+                // Row 3
+                Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Icon(FontAwesomeIcons.heart),
+                          SizedBox(
+                            width: 16.0,
+                          ),
+                          Icon(FontAwesomeIcons.comment),
+                          SizedBox(
+                            width: 16.0,
+                          ),
+                          Icon(FontAwesomeIcons.paperPlane),
+                        ],
+                      ),
+                      Icon(FontAwesomeIcons.bookmark),
+                    ],
+                  ),
+                ),
+
+                // row 4
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    "Liked by kavindu_dhananjaya ,isuru_98 and 89 others ",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, color: Colors.grey[800]),
+                  ),
+                ),
+
+                // row 5
               ],
             ),
     );
