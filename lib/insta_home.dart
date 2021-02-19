@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instaclone/insta_body.dart';
 
 class MyHomePage extends StatelessWidget {
   @override
@@ -8,22 +9,33 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Color(0xfff8faf8),
         centerTitle: true,
         elevation: 1.0,
-        leading: Icon(Icons.camera_alt),
-        title: SizedBox(
-          height: 35.0,
-          child: Image.asset("assets/images/insta_logo.png"),
+        // leading: Image.asset("assets/images/insta_logo.png"),
+        title: Row(
+          children: [
+            SizedBox(
+              height: 38.0,
+              child: Image.asset("assets/images/insta_logo.png"),
+            ),
+          ],
         ),
         actions: [
           IconButton(
             icon: Icon(
-              Icons.send,
+              Icons.bookmark_sharp,
+              color: Colors.black,
+            ),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.message,
               color: Colors.black,
             ),
             onPressed: () {},
           ),
         ],
       ),
-      body: Container(),
+      body: InstaBody(),
       bottomNavigationBar: Container(
         color: Colors.white,
         height: 50.0,
